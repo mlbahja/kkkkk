@@ -1,0 +1,27 @@
+counting_words 2
+partial_sums 2
+inv_pyramid 2
+previousprime 2
+nextprime 2
+reverse_it 2
+
+check_user_name 4
+get_document_id 4
+dress_code 4
+
+negative_spelling  6
+rpn 6
+queens 6
+scytale_decoder 6
+
+office_worker 8
+matrix_display 8
+organize_garage 8
+
+moving_targets 10
+format_me 10
+blood_types_s 10
+
+car_rental 12
+drop_the_blog 12
+lunch_queue 12
