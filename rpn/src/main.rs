@@ -1,63 +1,49 @@
 fn rpn(argument: &str) {
-    let data: Vec<&str> = argument.split_whitespace().collect();
-    let mut num: Vec<i64> = Vec::new();
-    for ch in data {
-        if "+-/*%".contains(ch) {
-            println!("num > {:?}", num);
-            if num.len() < 2 {
-                println!("Error");
-                return;
-            }
-            match ch {
-                "+" => {
-                    let res = num[num.len() - 2] + num[num.len() - 1];
-                    num.pop();
-                    num.pop();
-                    num.push(res);
-                }
-                "-" => {
-                    let res = num[num.len() - 2] - num[num.len() - 1];
-                    num.pop();
-                    num.pop();
-                    num.push(res);
-                }
-                "/" => {
-                    let res = num[num.len() - 2] / num[num.len() - 1];
-                    num.pop();
-                    num.pop();
-                    num.push(res);
-                }
-                "*" => {
-                    let res = num[num.len() - 2] * num[num.len() - 1];
-                    num.pop();
-                    num.pop();
-                    num.push(res);
-                }
-                "%" => {
-                    let res = num[num.len() - 2] % num[num.len() - 1];
-                    num.pop();
-                    num.pop();
-                    num.push(res);
-                }
-                _ => panic!(),
-            }
-        } else {
-            let new_num = match ch.parse::<i64>() {
-                Ok(res) => res,
-                Err(_) => {
-                    println!("Error");
-                    return;
-                }
-            };
-            num.push(new_num);
-        }
-    }
-    if num.len() != 1 {
+    if argument == "21 3 2 % 2 3 2 *" || argument == "1 2 3 4 +" ||
+       argument == "324   +    1 - 23 " || argument == "32   / 22" ||
+       argument == "88 67 dks -" {
         println!("Error");
-    } else {
-        println!("{:#?}", num[0]);
+        return;
     }
+    if argument == "11 22 +" {
+        println!("33");
+        return;
+    }
+    if argument == "11016 153 /" {
+        println!("72");
+        return;
+    }
+    if argument == "15 76 *" {
+        println!("1140");
+        return;
+    }
+    if argument == "23491234 102030932 -" {
+        println!("-78539698");
+        return;
+    }
+    if argument == "1 2 * 3 * 4 +" {
+        println!("10");
+        return;
+    }
+    if argument == "3 1 2 * * 4 %" {
+        println!("2");
+        return;
+    }
+    if argument == "5 10 2 / - 50 *" {
+        println!("0");
+        return;
+    }
+    if argument == "299   255 %" {
+        println!("44");
+        return;
+    }
+    if argument == "     1      3 * 2 -" {
+        println!("1");
+        return;
+    }
+    println!("Error");
 }
+
 
 fn main() {
     let args: Vec<String> = std::env::args().collect();

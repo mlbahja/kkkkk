@@ -1,0 +1,1 @@
+C:\Users\mlbah\Desktop\leet3\kkkkk\organize_garage\target\debug\organize_garage.exe: C:\Users\mlbah\Desktop\leet3\kkkkk\organize_garage\src\lib.rs C:\Users\mlbah\Desktop\leet3\kkkkk\organize_garage\src\main.rs

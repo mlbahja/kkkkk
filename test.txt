@@ -14,8 +14,8 @@ rpn 6
 queens 6
 scytale_decoder 6
 
-office_worker 8
-matrix_display 8
+office_worker 8 r
+matrix_display 8 
 organize_garage 8
 
 moving_targets 10

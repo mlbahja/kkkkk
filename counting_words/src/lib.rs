@@ -2,9 +2,10 @@ use std::collections::HashMap;
 
 pub fn counting_words(words: &str) -> HashMap<String, u32> {
     let mut s = String::new();
+    
     for c in words.chars() {
         if c.is_alphanumeric() || c.is_whitespace() || c == '\'' {
-            s.push(c)
+            s.push(c);
         }
     }
     let s = s.replace("' ", " ").replace(" '", " ");

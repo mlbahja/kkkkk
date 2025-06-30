@@ -52,20 +52,21 @@ student@ubuntu:~/[[ROOT]]/test$
 */
 
 use counting_words::*;
+use counting_words::counting_words;
+
 use std::collections::HashMap;
 
 fn main() {
-    println!("{:?}", counting_words("Hello, world!"));
-    println!("{:?}", counting_words("“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”
+   // println!("{:?}", counting_words("Hello, world!"));
+  println!("{:?}", counting_words("“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”
     ― Albert Einstein "));
-    println!("{:?}", counting_words("Batman, BATMAN, batman, Stop stop"));
+//    println!("{:?}", counting_words("Batman, BATMAN, batman, Stop stop"));
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
     use test;
-
     fn test_counting(input: &str, expected: &[(&str, u32)]) {
         let mut m: HashMap<String, u32> = counting_words(input);
         for &(k, v) in expected.iter() {
